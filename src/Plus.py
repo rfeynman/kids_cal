@@ -26,7 +26,7 @@ def plus(mini,limited, Neqns):
         #a=np.random.randint(1,10)
         #b=np.random.randint(1,10)
         i+=1
-        eqn_ele.append('%d + %d =        '%(a,b))
+        eqn_ele.append('%d + %d=        '%(a,b))
         #eqn_ele.append('\n')
     #print(eqn_ele)
     return eqn_ele
@@ -35,9 +35,9 @@ def minus(mini,limited, Neqns):
     eqn_ele=[]
     for i in range(0,Neqns):
         a=np.random.randint(mini,limited)
-        b=np.random.randint(1,a)
+        b=np.random.randint(5,a)
         i+=1
-        eqn_ele.append('%d - %d =         '%(a,b))
+        eqn_ele.append('%d - %d=         '%(a,b))
         #eqn_ele.append('\n')
     #print(eqn_ele)
     return eqn_ele
@@ -48,7 +48,7 @@ def times(mini,limited, Neqns):
         a=np.random.randint(mini,limited)
         b=np.random.randint(mini,limited)
         i+=1
-        eqn_ele.append('%d x %d =         '%(a,b))
+        eqn_ele.append('%d x %d=         '%(a,b))
     return eqn_ele
         
 
@@ -94,18 +94,18 @@ def genedoc(days,minical,limitedcal,pluscal,minuscal,timescal):
         day+=1
     style=d.styles['Normal']
     style.font.size=Pt(24)    
-    d.save('../Practise.docx')
+    d.save('../Practise_plus.docx')
 
 
 
 if __name__ == '__main__':
-    totalcal=30
-    pluscal=15
-    minuscal=15
+    totalcal=33
+    pluscal=13
+    minuscal=20
     timescal=totalcal-pluscal-minuscal
-    minical=5
+    minical=12
     limitedcal=100
-    days=5
+    days=13
     #dailycal=comb(minical,limitedcal,pluscal,minuscal,timescal)
     #print(dailycal)
     #genepdf("day1.pdf", dailycal)
