@@ -146,7 +146,7 @@ def mixcal(mini,limited,Neqns):
         
 
 def comb(mini,limited,Nplus,Nminus,Ntimes,Ndivide,Neqns):
-    
+    print(Nplus,Nminus,Ntimes,Ndivide,Neqns)
     comb=plus(mini,limited*8,Nplus)
     comb.extend(minus(mini,limited*8,Nminus))
     comb.extend(times(mini,limited,Ntimes))
@@ -191,7 +191,7 @@ def genedoc_eqn(days,minical,limitedcal,Neqns):
 
 
 if __name__ == '__main__':
-    test=1
+    test=0
     if(test==1):
         totalcal=5
         minical=3
@@ -200,10 +200,10 @@ if __name__ == '__main__':
         genedoc_eqn(days, minical, limitedcal, totalcal)
     elif(test==0):
         totalcal=34
-        pluscal=6
-        minuscal=7
-        timescal=6
-        eqncal=9
+        pluscal=9
+        minuscal=9
+        timescal=8
+        eqncal=0
         dividecal=totalcal-pluscal-minuscal-timescal-eqncal
         minical=12
         limitedcal=100
@@ -211,5 +211,6 @@ if __name__ == '__main__':
         #dailycal=comb(minical,limitedcal,pluscal,minuscal,timescal)
         #print(dailycal)
         #genepdf("day1.pdf", dailycal)
-        genedoc(days,minical,limitedcal,pluscal,minuscal,timescal,timescal,eqncal)
+        print("gene=",pluscal,minuscal,timescal,dividecal,eqncal)
+        genedoc(days,minical,limitedcal,pluscal,minuscal,timescal,dividecal,eqncal)
  
